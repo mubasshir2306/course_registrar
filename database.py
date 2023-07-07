@@ -153,7 +153,8 @@ def get_transcript_for(student):
         SELECT letter
         FROM letter_grade AS lg
         WHERE lg.grade <= sc.grade
-        ORDER BY lg.grade DESC LIMIT 1
+        ORDER BY lg.grade DESC 
+        LIMIT 1
         ) AS letter
         FROM student_course as sc
         WHERE student = %s 
